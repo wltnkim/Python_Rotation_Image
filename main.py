@@ -14,7 +14,7 @@ for input_file in input_files:
 
 
     num_rows,num_cols = img.shape[:2]
-    for i in range(1, 361):
+    for i in range(0, 361, 90):
         rotation_matrix = cv2.getRotationMatrix2D((num_cols/2,num_rows/2), i, 1)
         img_rotation = cv2.warpAffine(img,rotation_matrix,(num_cols,num_rows))
 
